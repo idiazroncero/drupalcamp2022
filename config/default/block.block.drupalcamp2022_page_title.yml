@@ -1,0 +1,20 @@
+uuid: 50cd0aa9-81c1-449d-929d-3a4467f18212
+langcode: en
+status: true
+dependencies:
+  theme:
+    - drupalcamp2022
+_core:
+  default_config_hash: ItFhhiUOoeR7oIq73ZaCV7PAYrOwXZ-9fazMzF5DJXM
+id: drupalcamp2022_page_title
+theme: drupalcamp2022
+region: header
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

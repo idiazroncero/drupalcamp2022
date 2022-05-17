@@ -1,0 +1,20 @@
+uuid: 86edb129-2562-4613-842c-775616d2d3f0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - drupalcamp2022
+_core:
+  default_config_hash: XRdb8LpbArVA6CpuuEZxzi50JIdjsJaCCZ5o3fH0Blk
+id: drupalcamp2022_local_actions
+theme: drupalcamp2022
+region: header
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

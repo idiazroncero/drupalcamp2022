@@ -1,0 +1,22 @@
+uuid: 5e6edd9a-26e1-4ced-861d-b2d647af5d7a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - drupalcamp2022
+_core:
+  default_config_hash: Qf2BoIzd9py5AYXZj8fJzCYDyVk1-AWXcu-AqQeDZKA
+id: drupalcamp2022_local_tasks
+theme: drupalcamp2022
+region: header
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }
