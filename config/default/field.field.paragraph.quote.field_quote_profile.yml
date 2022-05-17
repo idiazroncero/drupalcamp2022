@@ -1,0 +1,29 @@
+uuid: 18e6524b-4b18-4a88-bb28-4534c83eccc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quote_profile
+    - media.type.image
+    - paragraphs.paragraphs_type.quote
+id: paragraph.quote.field_quote_profile
+field_name: field_quote_profile
+entity_type: paragraph
+bundle: quote
+label: Profile
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -16,7 +16,7 @@ Go to the root of drupalcamp2022 theme and run the following commands: `npm
 install` or `yarn install`.
 
 #### Step 3
-Update `proxy` in **webpack.mix.js**.
+Update `proxy` in **config/proxy.js**.
 
 #### Step 4
 Run the following command to compile Sass and watch for changes: `npm run watch`

@@ -1,0 +1,12 @@
+// 1. Include the initial file, should be included within the components as well
+// -----------------------------------------------------------------------------
+@import "init";
+
+.gin--horizontal-toolbar #toolbar-administration {
+  z-index: $zindex-tooltip;
+}
+
+pre.sf-dump,
+pre.sf-dump .sf-dump-default {
+  z-index: $zindex-dropdown !important;
+}

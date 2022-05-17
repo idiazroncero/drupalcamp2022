@@ -2,9 +2,9 @@ _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: en
 uuid: 98be86f3-7206-4f64-ac95-e03a3fc0c6ad
-name: 'Drush Site-Install'
+name: DrupalCamp2022
 mail: admin@example.com
-slogan: ''
+slogan: 'Introducción al front-end // Diseño basado en componentes'
 page:
   403: ''
   404: ''

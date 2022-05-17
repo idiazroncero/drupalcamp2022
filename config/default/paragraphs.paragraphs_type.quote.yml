@@ -1,0 +1,10 @@
+uuid: e3b41ce5-0dad-4118-960b-a4c59b6ffb8e
+langcode: en
+status: true
+dependencies: {  }
+id: quote
+label: Quote
+icon_uuid: null
+icon_default: null
+description: 'A quote from an individual or company highlighting some aspect of relevance. Accepts an (optional) image.'
+behavior_plugins: {  }

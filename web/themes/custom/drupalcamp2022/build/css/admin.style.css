@@ -1,0 +1,8 @@
+.gin--horizontal-toolbar #toolbar-administration {
+  z-index: 1080;
+}
+
+pre.sf-dump,
+pre.sf-dump .sf-dump-default {
+  z-index: 1000 !important;
+}
