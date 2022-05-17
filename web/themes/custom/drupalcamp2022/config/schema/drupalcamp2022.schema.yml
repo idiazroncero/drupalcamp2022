@@ -1,0 +1,5 @@
+# Schema for the configuration files of the drupalcamp2022 theme.
+
+drupalcamp2022.settings:
+  type: theme_settings
+  label: 'drupalcamp2022 settings'

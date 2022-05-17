@@ -1,0 +1,10 @@
+style:
+  version: VERSION
+  css:
+    theme:
+      assets/css/drupalcamp2022.style.css: {}
+  js:
+    assets/js/drupalcamp2022.script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

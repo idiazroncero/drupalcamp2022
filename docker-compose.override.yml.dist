@@ -1,0 +1,54 @@
+version: "3.7"
+
+services:
+
+  # @NOTE: enable ssh_auth_sock environment and volume variables
+  # in the case you need to access to remote servers
+  # inside docker using self-hosted credentials. It only works on Linux.
+#  php:
+#    environment:
+#      SSH_AUTH_SOCK: /ssh-agent
+#    volumes:
+#      - $SSH_AUTH_SOCK:/ssh-agent
+## Alternative for macOS users: Mutagen https://wodby.com/docs/stacks/drupal/local#docker-for-mac
+#      - mutagen:/var/www/html
+
+#  nginx:
+#    volumes:
+# For macOS users (https://wodby.com/docs/stacks/drupal/local#docker-for-mac)
+#      - ./:/var/www/html:cached # User-guided caching
+#      - docker-sync:/var/www/html # Docker-sync
+
+  traefik:
+    # https://stackoverflow.com/questions/48851190/docker-compose-override-a-ports-property-instead-of-merging-it
+    ports:
+     - '8000:80'
+     - '8444:443'
+#     - '8080:8080' # Dashboard
+
+  mkdocs:
+    container_name: "${PROJECT_NAME}_mkdocs"
+    image: metadrop/docker-mkdocs:$MKDOCS_TAG
+    volumes:
+      - ./docs:/docs
+    working_dir: /docs
+    labels:
+      - "traefik.http.services.${PROJECT_NAME}_mkdocs.loadbalancer.server.port=8080"
+      - "traefik.http.routers.${PROJECT_NAME}_mkdocs.rule=Host(`docs.${PROJECT_BASE_URL}`)"
+
+  adminer:
+    container_name: "${PROJECT_NAME}_adminer"
+    image: wodby/adminer:$ADMINER_TAG
+    environment:
+#      # For PostgreSQL:
+#      #      ADMINER_DEFAULT_DB_DRIVER: pgsql
+      ADMINER_DEFAULT_DB_HOST: $DB_HOST
+      ADMINER_DEFAULT_DB_NAME: $DB_NAME
+    labels:
+      - "traefik.http.routers.${PROJECT_NAME}_adminer.rule=Host(`adminer.${PROJECT_BASE_URL}`)"
+
+#volumes:
+## For macOS users (Mutagen)
+#  mutagen:
+## For Xdebug profiler
+#  files:

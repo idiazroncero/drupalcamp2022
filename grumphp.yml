@@ -1,0 +1,36 @@
+grumphp:
+  git_hook_variables:
+    EXEC_GRUMPHP_COMMAND: docker-compose run --rm -T php
+  extensions:
+    - GrumphpDrupalCheck\ExtensionLoader
+  hooks_dir: ~
+  tasks:
+    git_commit_message:
+      enforce_no_subject_trailing_period: true
+      max_subject_width: 130
+      case_insensitive: false
+    phplint: ~
+    yamllint: ~
+    composer: ~
+    jsonlint: ~
+    drupalcheck: ~
+    phpcpd:
+      directory:
+        - ./docroot/**/custom
+      triggered_by:
+        - php
+        - inc
+        - module
+        - install
+        - profile
+        - theme
+    phpcs:
+      encoding: utf-8
+      triggered_by:
+        - php
+        - inc
+        - module
+        - install
+        - profile
+        - theme
+      standard: Drupal,DrupalPractice
