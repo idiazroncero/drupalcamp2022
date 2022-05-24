@@ -67,6 +67,11 @@
                 "web-root": "./web"
             }
         },
+        "patches": {
+            "drupal/radix": {
+                "3281660 - .mr-auto and similar classes should use end and start instead" : "https://git.drupalcode.org/project/radix/-/merge_requests/33.patch"
+            }
+        },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library"],

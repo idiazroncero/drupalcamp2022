@@ -51,5 +51,4 @@ function drupalcamp2022_preprocess_page(&$variables) {
   if (!empty($variables['is_admin']) && (bool) $variables['is_admin'] ) {
     $variables['#attached']['library'][] = "drupalcamp2022/admin";
   }
-  // dpm($variables);
 }

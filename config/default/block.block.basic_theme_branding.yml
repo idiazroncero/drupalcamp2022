@@ -1,0 +1,25 @@
+uuid: 7702c72c-2f0a-407a-858c-20b1917cd60f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - basic_theme
+_core:
+  default_config_hash: d-0emr1mEq7sFKDu5RHUJckvNk62hvIZdRwPEfnJyGg
+id: basic_theme_branding
+theme: basic_theme
+region: navbar_branding
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

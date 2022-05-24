@@ -1,0 +1,42 @@
+<?php
+
+use Drupal\Core\Render\Element;
+
+/**
+ * @file
+ * Functions to support theming in the Basic Theme theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function basic_theme_preprocess_block__simpleblock(&$variables) {
+  if (!empty($variables['content']['simpleblock']) && !empty($variables['content']['simpleblock']['name'])) {
+    foreach(Element::children($variables['content']['simpleblock']['name']) as $index => $element) {
+      $even = $index % 2 === 0 ? 'even' : 'odd';
+      $variables['content']['simpleblock']['name'][$element]['#attributes']['class'][] = "simple-block__name__part--$even";
+    };
+  };
+}
+
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function basic_theme_preprocess_html(&$variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page.html.twig.
+ */
+function basic_theme_preprocess_page(&$variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for node.html.twig.
+ */
+function basic_theme_preprocess_node(&$variables) {
+
+}

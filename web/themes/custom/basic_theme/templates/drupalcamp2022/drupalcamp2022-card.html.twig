@@ -1,0 +1,22 @@
+{% set classes = [
+  'simple-block',
+  border ? 'simple-block--bordered'
+] %}
+
+<section{{ attributes.addClass(classes) }} >
+  {% if icon != 'other' %}
+    <img src="modules/custom/drupalcamp2022_block/img/profile-{{ icon }}.svg" loading="lazy" class="simple-block__image">
+  {% endif %}
+
+	<h1 class="simple-block__name">
+    {% set split_name = name | split(' ') %}
+    {% for part in split_name %}
+      {% set part_classes = [
+        'simple-block__name__part',
+        'simple-block__name__part--' ~ loop.index0,
+        'simple-block__name__part--' ~ (loop.index0 is odd ? 'odd' : 'even')
+      ] %}
+      <span{{ create_attribute().addClass(part_classes) }}>{{ part }}</span>
+    {% endfor %}
+	</h1>
+</section>

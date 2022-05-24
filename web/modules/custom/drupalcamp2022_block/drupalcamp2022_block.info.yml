@@ -1,0 +1,6 @@
+name: drupalcamp2022_block
+type: module
+description: Adds blocks for testing front-end
+package: Drupalcamp2022
+core: 8.x
+core_version_requirement: ^8 || ^9

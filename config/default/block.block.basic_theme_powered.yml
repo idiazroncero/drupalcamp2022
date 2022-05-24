@@ -1,0 +1,22 @@
+uuid: 820577b3-6741-4fc9-9854-f7fb50ac907b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - basic_theme
+_core:
+  default_config_hash: I6Esh8cDlPdl2POZg4MOSRUrQNYA1UNCJCxL2yqT_wc
+id: basic_theme_powered
+theme: basic_theme
+region: footer
+weight: -5
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

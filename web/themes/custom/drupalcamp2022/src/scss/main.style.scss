@@ -1,5 +1,7 @@
 // Base
 // -----------------------------------------------------------------------------
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=Playfair+Display:wght@900&display=swap');
 @import "bootstrap";
 
 // Parent Drupal related components
@@ -17,4 +19,4 @@
 
 // Other
 // -----------------------------------------------------------------------------
-
+@import "./layout/page.footer.scss"

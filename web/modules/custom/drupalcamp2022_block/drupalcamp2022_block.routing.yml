@@ -1,0 +1,7 @@
+drupalcamp2022_block.example:
+  path: '/drupalcamp2022-block/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\drupalcamp2022_block\Controller\Drupalcamp2022BlockController::build'
+  requirements:
+    _permission: 'access content'

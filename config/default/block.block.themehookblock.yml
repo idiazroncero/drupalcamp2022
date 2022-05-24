@@ -1,0 +1,23 @@
+uuid: 76bf0e29-bfaa-4e53-b45d-165cb1153264
+langcode: en
+status: true
+dependencies:
+  module:
+    - drupalcamp2022_block
+  theme:
+    - basic_theme
+id: themehookblock
+theme: basic_theme
+region: sidebar
+weight: -5
+provider: null
+plugin: drupalcamp2022_themehook_block
+settings:
+  id: drupalcamp2022_themehook_block
+  label: 'Theme Hook Block'
+  label_display: '0'
+  provider: drupalcamp2022_block
+  name: 'Emérito Rodríguez de las Cuevas'
+  border: 1
+  icon: female
+visibility: {  }

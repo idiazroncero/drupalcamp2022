@@ -1,0 +1,18 @@
+name: Basic Theme
+type: theme
+base theme: drupalcamp2022
+description: A very basic theme, Radix-based, to showcase front-end strategies and concepts
+package: Drupalcamp2022
+core: 8.x
+core_version_requirement: ^8 || ^9
+libraries:
+  - basic_theme/global
+regions:
+  navbar_branding: Navbar branding
+  navbar_left:  Navbar left
+  navbar_right: Navbar right
+  header: Header
+  content: Content
+  sidebar: Sidebar
+  page_bottom: Page bottom
+  footer: Footer

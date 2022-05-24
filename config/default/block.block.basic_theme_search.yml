@@ -1,0 +1,23 @@
+uuid: 8f189839-31dc-43a1-a3dd-a25ebaaa8327
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - basic_theme
+_core:
+  default_config_hash: jQ-C8l3dJPqYCGST1e-kSjR14PDP4wq-iFbp8dMFcRo
+id: basic_theme_search
+theme: basic_theme
+region: navbar_right
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  label_display: '0'
+  provider: search
+  page_id: node_search
+visibility: {  }

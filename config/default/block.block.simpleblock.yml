@@ -1,0 +1,22 @@
+uuid: 85b5ae62-8c23-4080-812e-71b4b12e673d
+langcode: en
+status: true
+dependencies:
+  module:
+    - drupalcamp2022_block
+  theme:
+    - basic_theme
+id: simpleblock
+theme: basic_theme
+region: sidebar
+weight: -6
+provider: null
+plugin: drupalcamp2022_simple_block
+settings:
+  id: drupalcamp2022_simple_block
+  label: 'Simple Block'
+  label_display: '0'
+  provider: drupalcamp2022_block
+  name: 'Nacho Díaz Roncero Fraile'
+  border: 1
+visibility: {  }

@@ -10,7 +10,7 @@
       "request": "launch",
       "port": 9003,
       "pathMappings": {
-        "var/www/html" : "/home/nacho/Projects/drupalcamp2022"
+        "/var/www/html" : "/home/nacho/Projects/drupalcamp2022"
       }
     }
   ]
