@@ -18,5 +18,5 @@ settings:
   label_display: '0'
   provider: drupalcamp2022_block
   name: 'Nacho Díaz Roncero Fraile'
-  border: 1
+  border: 0
 visibility: {  }

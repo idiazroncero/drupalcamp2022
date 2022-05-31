@@ -1,0 +1,30 @@
+%quote {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+
+  &__image {
+    width:100%;
+    height: auto;
+  }
+
+  &--border {
+    border: 3px solid var(--primary);
+  }
+}
+
+.paragraph--type--quote,
+.other-entity--quote {
+  @extend %quote;
+}
+
+.paragraph--type--quote .simple-block__image img,
+.other-entity--quote .image-wrapper img {
+  @extend %quote__image;
+}
+
+.paragraph--type--quote.has-border,
+.other-entity--quote.is-bordered {
+  @extend %quote--border;
+}

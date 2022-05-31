@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\Core\Render\Element;
+use Drupal\paragraphs\ParagraphInterface;
 
 /**
  * @file
@@ -11,32 +12,62 @@ use Drupal\Core\Render\Element;
  * Implements hook_preprocess_HOOK() for html.html.twig.
  */
 function basic_theme_preprocess_block__simpleblock(&$variables) {
-  if (!empty($variables['content']['simpleblock']) && !empty($variables['content']['simpleblock']['name'])) {
-    foreach(Element::children($variables['content']['simpleblock']['name']) as $index => $element) {
-      $even = $index % 2 === 0 ? 'even' : 'odd';
-      $variables['content']['simpleblock']['name'][$element]['#attributes']['class'][] = "simple-block__name__part--$even";
-    };
-  };
-}
-
-
-/**
- * Implements hook_preprocess_HOOK() for html.html.twig.
- */
-function basic_theme_preprocess_html(&$variables) {
-
-}
-
-/**
- * Implements hook_preprocess_HOOK() for page.html.twig.
- */
-function basic_theme_preprocess_page(&$variables) {
-
+  $split_title = explode(' ', $variables['content']['simpleblock']['name']['#value']);
+  $parts = [];
+  foreach ($split_title as $key => $title_part) {
+    $parts['part-' . $key] = [
+      '#type' => 'html_tag',
+      '#tag' => 'span',
+      '#value' => $title_part,
+      '#attributes' => [
+        'class' => [
+          'simple-block__name__part',
+          'simple-block__name__part--' . ($key % 2 === 0 ? 'odd' : 'even')
+        ]
+      ]
+    ];
+  }
+  $variables['parts'] = $parts;
 }
 
 /**
- * Implements hook_preprocess_HOOK() for node.html.twig.
+ * Implements hook_preprocess_paragraph__quote().
  */
-function basic_theme_preprocess_node(&$variables) {
+function basic_theme_preprocess_paragraph__quote(&$variables) {
+  $paragraph = $variables['paragraph'];
 
+  if ($paragraph->hasField('field_border') && !$paragraph->get('field_border')->isEmpty()) {
+    $variables['has_border'] = (bool) $paragraph->get('field_border')->value;
+  }
+
+  if ($paragraph->hasField('field_quote_profile')) {
+    $variables['has_profile'] = (bool) !$paragraph->get('field_quote_profile')->isEmpty();
+  }
+
+  $variables['#attached']['library'][] = 'basic_theme/quote';
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function basic_theme_preprocess_field__field_quote_author(&$variables) {
+  if (!empty($variables['content']['items'][0]['content'])) {
+    $title = $variables['content']['items'][0]['content']['#value'];
+    $split_title = explode(' ', $title);
+    foreach ($split_title as $key => $title_part) {
+      $variables['content']['items'][0]['content']['part-' . $key] = [
+        '#type' => 'html_tag',
+        '#tag' => 'span',
+        '#value' => $title_part,
+        '#attributes' => [
+          'class' => [
+            'simple-block__name__part',
+            'simple-block__name__part--' . ($key % 2 === 0 ? 'odd' : 'even')
+          ]
+        ]
+      ];
+    }
+    unset($variables['content']['items'][0]['content']['#value']);
+  }
 }

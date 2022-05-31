@@ -42,7 +42,9 @@
         "drupal/simple_sitemap": "^3.8",
         "drupal/stage_file_proxy": "^1.1",
         "drupal/styleguide": "^2.0@beta",
+        "drupal/text_field_formatter": "^2.0",
         "drupal/ultimate_cron": "^2.0@alpha",
+        "drupal/views_infinite_scroll": "^2.0",
         "drupal/webform": "^6.0@alpha",
         "drush/drush": "^10.3"
     },

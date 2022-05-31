@@ -31,6 +31,7 @@ module:
   history: 0
   image: 0
   link: 0
+  marquee_sina: 0
   media: 0
   media_library: 0
   menu_link_content: 0
@@ -47,10 +48,12 @@ module:
   system: 0
   taxonomy: 0
   text: 0
+  text_field_formatter: 0
   toolbar: 0
   tour: 0
   update: 0
   user: 0
+  views_infinite_scroll: 0
   views_ui: 0
   views: 10
   paragraphs: 11

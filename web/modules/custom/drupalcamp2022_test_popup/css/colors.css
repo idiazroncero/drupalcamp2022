@@ -1,0 +1,7 @@
+:root {
+  --popup-overlay: rgba(0,0,0,0.25);
+  --popup-button-color: #33ff66;
+  --popup-button-text: #000;
+  --popup-primary: #448877;
+  --popup-bg: #fff;
+}

@@ -3,39 +3,50 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.quote.field_border
+    - field.field.paragraph.quote.field_icon_type
     - field.field.paragraph.quote.field_quote_author
     - field.field.paragraph.quote.field_quote_profile
     - field.field.paragraph.quote.field_quote_text
+    - image.style.square_thumbnail
     - paragraphs.paragraphs_type.quote
   module:
+    - media
     - text
+    - text_field_formatter
 id: paragraph.quote.default
 targetEntityType: paragraph
 bundle: quote
 mode: default
 content:
   field_quote_author:
-    type: string
-    label: above
+    type: text_field_formatter
+    label: hidden
     settings:
+      wrap_tag: h1
+      wrap_class: simple-block__name
+      wrap_attributes: ''
+      override_link_label: ''
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
   field_quote_profile:
-    type: entity_reference_entity_view
-    label: above
+    type: media_thumbnail
+    label: hidden
     settings:
-      view_mode: default
-      link: false
+      image_link: ''
+      image_style: square_thumbnail
     third_party_settings: {  }
     weight: 2
     region: content
   field_quote_text:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
-hidden: {  }
+hidden:
+  field_border: true
+  field_icon_type: true

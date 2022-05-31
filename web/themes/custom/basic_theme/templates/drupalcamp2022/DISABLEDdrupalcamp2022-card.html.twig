@@ -1,0 +1,14 @@
+{% set classes = [
+  'simple-block',
+  border ? 'simple-block--bordered'
+] %}
+
+<article{{ attributes.addClass(classes) }} >
+  {% if icon != 'other' %}
+    <img src="/modules/custom/drupalcamp2022_block/img/profile-{{ icon }}.svg" loading="lazy" class="simple-block__image">
+  {% endif %}
+
+	<h1 class="simple-block__name">
+    {{ parts }}
+	</h1>
+</article>

@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Drupalcamp2022 Test Popup module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function drupalcamp2022_test_popup_preprocess_page(&$variables) {
+  $popup = [
+    '#type' => 'container',
+    '#attributes' => [
+      'class' => [
+        'popup-overlay'
+      ]
+    ],
+    'content' => [
+      '#type' => 'container',
+      '#attributes' => [
+        'class' => [
+          'popup'
+        ]
+      ],
+      'heading' => [
+        '#markup' => '<h3 class="popup-title">' . t('Popup añadido por el módulo') . '</h3>',
+      ],
+      'body' => [
+        '#markup' => '<p class="popup-message">At nascetur aenean consectetuer nec suspendisse praesent velit. Adipiscing dapibus scelerisque mauris porttitor lacinia interdum ultricies nulla ultrices. Orci letius ex lorem molestie duis. Non vel nam egestas purus massa fames curabitur sem blandit sagittis.</p>',
+      ],
+      'action' => [
+        '#markup' => '<a class="popup-button" href="/">' . t('Saber más') . '</a>',
+      ],
+    ]
+  ];
+
+  $variables['page']['content']['popup'] = $popup;
+  $variables['#attached']['library'][] = 'drupalcamp2022_test_popup/popup';
+}

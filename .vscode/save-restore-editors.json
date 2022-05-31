@@ -1,0 +1,25 @@
+{
+  "tabs": [
+    {
+      "name": "TEST",
+      "tabGroups": [
+        {
+          "files": [
+            "file:///Users/idiazroncero/Localdev/sites/drupalcamp2022/.env",
+            "file:///Users/idiazroncero/Localdev/sites/drupalcamp2022/web/themes/custom/basic_theme/templates/field/field.html.twig",
+            "file:///Users/idiazroncero/Localdev/sites/drupalcamp2022/web/modules/custom/marquee_sina/src/Plugin/Field/FieldFormatter/MarqueeFormatter.php",
+            "file:///Users/idiazroncero/Localdev/sites/drupalcamp2022/web/themes/custom/drupalcamp2022/drupalcamp2022.info.yml",
+            "file:///Users/idiazroncero/Localdev/sites/drupalcamp2022/web/themes/contrib/radix/radix.info.yml",
+            "file:///Users/idiazroncero/Localdev/sites/drupalcamp2022/web/core/themes/classy/classy.info.yml",
+            "file:///Users/idiazroncero/Localdev/sites/drupalcamp2022/web/modules/custom/drupalcamp2022_block/src/Plugin/Block/SimpleBlock.php",
+            "file:///Users/idiazroncero/Localdev/sites/drupalcamp2022/web/themes/custom/basic_theme/templates/drupalcamp2022/drupalcamp2022-card.html.twig",
+            "file:///Users/idiazroncero/Localdev/sites/drupalcamp2022/web/themes/contrib/radix/templates/page/BAKpage.html.twig",
+            "file:///Users/idiazroncero/Localdev/sites/drupalcamp2022/web/themes/custom/basic_theme/css/style.css",
+            "file:///Users/idiazroncero/Localdev/sites/drupalcamp2022/web/themes/custom/basic_theme/basic_theme.info.yml"
+          ],
+          "viewColumn": 1
+        }
+      ]
+    }
+  ]
+}

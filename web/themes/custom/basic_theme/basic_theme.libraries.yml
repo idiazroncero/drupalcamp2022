@@ -1,9 +1,32 @@
 global:
+  version: 1.0.0
   js:
     js/drupalcamp2022.js: {}
   css:
     theme:
       css/style.css: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+
+quote:
+  version: 1.0.0
+  js:
+    js/quote.js: {}
+  css:
+    theme:
+      css/components/quote.css: {}
+
+# quote:
+#   version: 1.0.0
+#   js:
+#     js/bhv-quote.js: {}
+#   css:
+#     theme:
+#       css/components/quote.css: {}
+#   dependencies:
+#     - core/jquery
+#     - core/jquery.once
 
 # Main theme library.
 # global:

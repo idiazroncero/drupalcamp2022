@@ -1,0 +1,23 @@
+uuid: 76c654f4-c526-4c83-96a0-082050e9d6ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_border
+    - paragraphs.paragraphs_type.quote
+id: paragraph.quote.field_border
+field_name: field_border
+entity_type: paragraph
+bundle: quote
+label: 'Show border'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

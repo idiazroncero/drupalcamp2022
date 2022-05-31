@@ -1,0 +1,15 @@
+uuid: e29d901f-cb1e-4a83-8eef-7fb0cb2dd62d
+langcode: en
+status: true
+dependencies: {  }
+name: widescreen
+label: 'Too Wide, Too Narrow'
+effects:
+  4d85f682-13bc-4b6b-b95c-9094140f7f77:
+    uuid: 4d85f682-13bc-4b6b-b95c-9094140f7f77
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 400
+      anchor: center-center

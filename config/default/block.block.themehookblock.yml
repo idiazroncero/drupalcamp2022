@@ -19,5 +19,5 @@ settings:
   provider: drupalcamp2022_block
   name: 'Emérito Rodríguez de las Cuevas'
   border: 1
-  icon: female
+  icon: male
 visibility: {  }

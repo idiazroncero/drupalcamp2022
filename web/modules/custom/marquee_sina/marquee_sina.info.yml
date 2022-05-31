@@ -1,0 +1,6 @@
+name: marquee-sina
+type: module
+description: Bring back good&#039;ol marquee HTML tag for text fields.
+package: Field
+core: 8.x
+core_version_requirement: ^8 || ^9

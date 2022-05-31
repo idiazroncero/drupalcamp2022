@@ -1,0 +1,8 @@
+popup:
+  css:
+    base:
+      css/colors.css: {}
+    layout:
+      css/layout.css: {}
+    theme:
+      css/theme.css: {}

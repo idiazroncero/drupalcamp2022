@@ -72,7 +72,7 @@ class SimpleBlock extends BlockBase {
           '#type' => 'html_tag',
           '#tag' => 'img',
           '#attributes' => [
-            'src' => 'modules/custom/drupalcamp2022_block/img/profile-male.svg',
+            'src' => '/modules/custom/drupalcamp2022_block/img/profile-male.svg',
             'loading' => 'lazy',
             'class' => [
               'simple-block__image'
@@ -82,6 +82,7 @@ class SimpleBlock extends BlockBase {
         'name' => [
           '#type' => 'html_tag',
           '#tag' => 'h1',
+          '#value' => $name,
           '#attributes' => [
             'class' => [
               'simple-block__name'
@@ -92,28 +93,13 @@ class SimpleBlock extends BlockBase {
     ];
 
     // Conditionally add the border class.
-    if ($border) {
+    if ($border === TRUE) {
       $build['simpleblock']['#attributes']['class'][] = "simple-block--bordered";
     };
-
-    // Split the name and generate a <span> wrapper around each one.
-    $split_name = explode(' ', $name);
-
-    foreach($split_name as $key => $value) {
-      $build['simpleblock']['name']["part-$key"] = [
-        '#type' => 'html_tag',
-        '#tag' => 'span',
-        '#value' => $value,
-        '#attributes' => [
-          'class' => [
-            'simple-block__name__part',
-            'simple-block__name__part--' . $key
-          ]
-        ]
-      ];
-    }
 
     return $build;
   }
 
 }
+
+

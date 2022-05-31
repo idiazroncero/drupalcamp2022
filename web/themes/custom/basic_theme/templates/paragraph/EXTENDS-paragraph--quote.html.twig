@@ -1,0 +1,21 @@
+{% embed "@basic_theme/paragraph/paragraph.html.twig" with {
+    extra_classes: [
+      has_border ? 'has-border'
+    ]
+  } %}
+
+  {{ attach_library('basic_theme/quote')}}
+
+  {% block content %}
+    {% set icon = paragraph.hasField('field_icon_type') ? paragraph.get('field_icon_type').value %}
+    <div class="simple-block__image">
+      {% if has_profile %}
+        {{ content.field_quote_profile }}
+      {% elseif icon and icon != 'other'%}
+        <img src="/modules/custom/drupalcamp2022_block/img/profile-{{ icon }}.svg" loading="lazy">
+      {% endif %}
+    </div>
+    {{ content | without('field_quote_profile') }}
+  {% endblock %}
+
+{% endembed %}

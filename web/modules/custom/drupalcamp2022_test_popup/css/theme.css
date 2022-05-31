@@ -1,0 +1,23 @@
+.popup {
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  background-color: var(--popup-bg);
+}
+
+.popup-overlay {
+  background-color: var(--popup-overlay);
+}
+
+.popup-title {
+  font-family: Arial, sans-serif;
+  border-bottom: 2px solid var(--popup-primary);
+  color: var(--popup-primary);
+}
+
+.popup-button {
+  font-size: 1.33rem;
+  padding: 10px 20px;
+  background-color: var(--popup-button-color);
+  color: var(--popup-button-text);
+  border: 2px solid var(--popup-button-text);
+}

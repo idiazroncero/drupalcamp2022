@@ -1,0 +1,26 @@
+.popup {
+  padding: 2rem;
+  background-color: var(--popup-bg);
+}
+
+.popup-overlay {
+  background-color: var(--popup-overlay);
+}
+
+.popup-title {
+  color: var(--popup-primary);
+}
+
+.popup-button {
+  background-color: var(--popup-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  color: white;
+  text-decoration: none;
+}
+
+.popup-button:hover,
+.popup-button:focus {
+  background-color: var(--secondary);
+  color: black;
+}
